@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stationary Management System</title>
+    <link rel="icon" type="image/x-icon" href="Icon.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="login style.css">
+    <link rel="stylesheet" href="dashboard.html">
+    
+
+</head>
+<body>
+    <div class="form-container">
+        <div class="logo">
+            <img src="punjab-information-technology-board-pitb-logo-3EF1FC7FB7-seeklogo.com.png" alt="Logo">
+        </div>
+        <div class="form" >
+            <form>
+                
+                <h1 style="color: white;" >LOGIN</h1>
+                <div class="input-box">
+                 <input type="text" placeholder="Username" id="username" required>
+                 <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password"id="password" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <div class="remember-forget">
+                    <label style="color: white;"><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn" onclick="auth(event)">Login</button>
+                <div class="register-link">
+                    <p style="color: whitesmoke;">Don't have an account? <a href="#">Register</a></p>
+                </div>
+            </form>
+<script>
+            function auth(event){
+                event.preventDefault();0
+                let username = document.getElementById('username').value;
+                let password = document.getElementById('password').value;
+                // Mock login validation (replace with actual backend validation)
+                if (username === "admin" && password === "12345678") {
+                    alert("you are successfuly logged in")
+                    window.location.href = "dashboard.html";  // Redirect to the Home page
+                } 
+                else {
+                    alert('Login failed: Invalid username or password.');
+                    return false; // Prevent form submission
+                }
+            }
+
+        </script>
+           
+</body>
+</html>

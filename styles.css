@@ -1,0 +1,139 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color:white;
+    background-image: url('fi.jpeg');
+    background-size: cover;
+    background-position:center ;
+    background-repeat: no-repeat;
+    height: 100%;
+    
+    
+}
+
+header {
+    background-color: #333;
+    padding: 0px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: white;
+}
+
+h2 {
+    color:white;
+
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 18px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Home Section */
+
+
+
+
+
+/* Items Section */
+#items {
+    padding: 20px;
+}
+
+#items table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#items table, th, td {
+    border: 1px solid #ddd;
+}
+
+#items th, #items td {
+    padding: 8px;
+    text-align: left;
+    color: white;
+}
+
+#items th {
+    background-color: grey;
+}
+
+form {
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form button {
+    margin-top: 10px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* About Us Section */
+#about {
+    padding: 20px;
+    background-color:black;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+/* Contact Us Section */ */
+
+
+/* Footer */
+footer {
+    background-color:transparent;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom:120px;
+    width: 100%;
+}

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stationary Management System</title>
+    <link rel="stylesheet" href="item style.css">
+    <link rel="stylesheet" href="ABOUT US.html">
+    <link rel="stylesheet" href="contact us.html">
+    <link rel="stylesheet" href="dashboard.html">
+    <link rel="icon" type="x-icon" href="Icon.png">
+  
+   
+</head>
+<body>
+    <header>
+        <h1>Stationary Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">dashboard</a></li>
+                <li><a href="items.html">Items</a></li>
+                <li><a href="contact us.html">Contact us</a></li>
+                <li><a href="ABOUT US.html ">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Items Section -->
+    <section id="items">
+        <h2>View Stationary Items</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item ID</th>
+                    <th>Item Name</th>
+                    <th>Quantity Available</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Pencil</td>
+                    <td>50</td>
+                    <td>Writing</td>
+                </tr>
+                <!-- Repeat the rows for each item -->
+                <!-- ... -->
+                <tr>
+                    <td>2</td>
+                    <td>Highlighter</td>
+                    <td>150</td>
+                    <td>Writing</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Notebook</td>
+                    <td>100</td>
+                    <td>Paper</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Ballpoint</td>
+                    <td>200</td>
+                    <td>Writing</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Diary</td>
+                    <td>25</td>
+                    <td>Paper</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Stapler</td>
+                    <td>15</td>
+                    <td>Tools</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Puncher</td>
+                    <td>10</td>
+                    <td>Tools</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Files</td>
+                    <td>75</td>
+                    <td>Paper</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Stapler Pins</td>
+                    <td>1000</td>
+                    <td>Accessories</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Paperclip</td>
+                    <td>500</td>
+                    <td>Accessories</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>File Separator</td>
+                    <td>60</td>
+                    <td>Paper</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Sticky Notes</td>
+                    <td>300</td>
+                    <td>Paper</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>A4 Paper</td>
+                    <td>1000</td>
+                    <td>Paper</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Legal Size Paper</td>
+                    <td>500</td>
+                    <td>Paper</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Glitter</td>
+                    <td>20</td>
+                    <td>Craft</td>
+                </tr>
+            </tbody>
+            
+            <form id="usage-form">
+                <label for="item-id"><b>ITEM ID:</b></label>
+                <input type="text" id="item-id" name="item-id" required><br><br>
+            
+                <label for="employee-name"><b>EMPLOYEE NAME:</b></label>
+                <input type="text" id="employee-name" name="employee-name" required><br><br>
+            
+                <label for="quantity-used"><b>QUANTITY USED:</b></label>
+                <input type="number" id="quantity-used" name="quantity-used" required><br><br>
+            
+                <button type="submit">Submit</button>
+            </form>
+            
+        <footer>
+            <p>&copy; <b>2024 Stationary Management System</b></p>
+        </footer>
+
+        <script>// Create an array to store item data
+            const items = [
+              { id: 1, name: "Pencil", quantity: 50, category: "Writing" },
+              {id: 2, name:"Highlighter", quantity:150,category:"Writing"},
+              {id: 3,name:"Notebook", quantity:100,category:"Paper"},
+              {id: 4,name:"Ballpoint", quantity:200,category:"Writing"},
+              {id: 5,name:"Diary", quantity:25,category:"Paper"},
+              {id: 6,name:"Stapler", quantity:15,category:"Tools"},
+              {id: 7,name:"Puncher", quantity:10,category:"Tools"},
+              {id: 8,name:"files", quantity:75,category:"Ppaer"},
+              {id: 9,name:"Stapler Pins", quantity:1000,category:"Accessories"},
+              {id: 10,name:"Paperclip", quantity:500,category:"Accessories"},
+              {id: 11,name:"File Seperator", quantity:60,category:"Paper"},
+              {id: 12,name:"Sticky notes", quantity:300,category:"Paper"},
+              {id: 13,name:"A4 paper", quantity:1000,category:"Paper"},
+              {id: 14,name:"Legal Size Paper", quantity:500,category:"Paper"},
+              { id: 15, name: "Glitter", quantity:20 , category: "Craft" }
+            ];
+            // Function to update item quantity and display remaining stock
+      function updateItemQuantity(itemId, quantityUsed) {
+        const itemIndex = items.findIndex(item => item.id === parseInt(itemId));
+        if (itemIndex !== -1) {
+          const item = items[itemIndex];
+          if (item.quantity >= quantityUsed) {
+            item.quantity -= quantityUsed;
+    
+            // Calculate and display remaining stock for the selected item only
+            const remainingStock = item.quantity;
+            alert(`Remaining stock for "${item.name}" (ID: ${item.id}): ${remainingStock} out of ${item.quantity + quantityUsed}`); // Show original + used quantity
+          } else {
+            alert("Insufficient stock");
+          }
+        } else {
+          alert("Item not found");
+        }
+      }
+    
+      // Event listener for the usage form
+      document.getElementById("usage-form").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const itemId = document.getElementById("item-id").value;
+        const quantityUsed = parseInt(document.getElementById("quantity-used").value);
+        updateItemQuantity(itemId, quantityUsed);
+
+          });
+            </script>
+                 <!-- backend wok to show the information on the dashboard -->
+            <script>
+            
+    document.getElementById("usage-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const itemId = document.getElementById("item-id").value;
+        const quantityUsed = parseInt(document.getElementById("quantity-used").value);
+        const employeeName = document.getElementById("employee-name").value;
+
+        // Update item quantity
+        const items = JSON.parse(localStorage.getItem('items')) || [
+            { id: 1, quantity: 50 },
+            { id: 2, quantity: 150 },
+            { id: 3, quantity: 100 },
+            { id: 4, quantity: 200 },
+            { id: 5, quantity: 25 },
+            { id: 6, quantity: 15 },
+            { id: 7, quantity: 10 },
+            { id: 8, quantity: 75 },
+            { id: 9, quantity: 1000 },
+            { id: 10, quantity: 500 },
+            { id: 11, quantity: 60 },
+            { id: 12, quantity: 300 },
+            { id: 13, quantity: 1000 },
+            { id: 14, quantity: 500 },
+            { id: 15, quantity: 20 }
+        ];
+
+        const item = items.find(i => i.id == itemId);
+        if (item && item.quantity >= quantityUsed) {
+            item.quantity -= quantityUsed;
+            localStorage.setItem('items', JSON.stringify(items));
+
+            // Store recent activity
+            const recentActivities = JSON.parse(localStorage.getItem('recentActivities')) || [];
+            recentActivities.push(`${employeeName} used ${quantityUsed} of Item ID ${itemId}`);
+            localStorage.setItem('recentActivities', JSON.stringify(recentActivities));
+
+            // Redirect to dashboard
+            window.location.href = 'dashboard.html';
+        } else {
+            alert("Insufficient stock or item not found.");
+        }
+    });
+
+</script>
+
+        
+</body>
+</html>

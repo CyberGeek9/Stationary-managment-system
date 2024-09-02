@@ -1,0 +1,114 @@
+/* Reset some basic styles */
+body, h1, h2, p, ul, li, form, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styles */
+body {
+    background:url(fi.jpeg);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* ///// */
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+/* Navigation Menu Styles */
+nav ul {
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color:gray;
+}
+
+/* Contact Us Section Styles */
+#contact {
+    background-color:transparent;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    margin-top: 30px;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color:white;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+    border-color: white;
+    outline: none;
+}
+
+#contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color:grey;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 60px;
+    text-align: center;
+    color:white;
+    font-size: 0.9rem;
+}

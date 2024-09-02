@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Stationary Management System</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="icon" type="x-icon" href="Icon.png">
+    <link rel="stylesheet" href="items.html">
+    <link rel="stylesheet" href="ABOUT US.html">
+    <link rel="stylesheet" href="contact us.html">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images (2).jpg" alt="Logo">
+        </div>
+
+    
+        <h1>Dashboard</h1>
+        <nav>
+            <ul>
+                <!-- <li><a href="home.html">home</a></li> -->
+                <li><a href="items.html">Inventry Overview</a></li>
+                <li><a href="contact us.html">Contact us</a></li>
+                <li><a href="ABOUT US.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="summary-cards">
+            <div class="card">
+                <h2>Total Items</h2>
+                <p>4005</p>
+            <!-- </div>
+            <div class="card">
+                <h2>Items Used</h2>
+                <p>150</p>
+            </div> -->
+            <!-- <div class="card">
+                <h2>Remaining Stock</h2>
+                <p>3885</p>
+            </div> -->
+        </section>
+
+        <section class="recent-activity" id="recentActivities">
+            <h2>Recent Activity</h2>
+            <ul>
+                <li>Item A was added by User X.</li>
+                <li>Item B was used by User Y.</li>
+                <li>Stock of Item C was updated.</li>
+            </ul>
+        </section>
+
+        <section class="quick-access">
+            <button onclick="window.location.href='items.html'">Need Item</button>
+        </section>
+
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Stationary Management System</p>
+    </footer>
+      
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Retrieve and update summary cards
+            const items = JSON.parse(localStorage.getItem('items')) || [];
+            const totalItems = items.reduce((acc, item) => acc + item.quantity, 0);
+            const itemsUsed = items.reduce((acc, item) => acc + (item.initialQuantity - item.quantity), 0);
+            const remainingStock = totalItems - itemsUsed;
+    
+            document.querySelector(".card:nth-child(1) p").textContent = totalItems;
+            document.querySelector(".card:nth-child(2) p").textContent = itemsUsed;
+            document.querySelector(".card:nth-child(3) p").textContent = remainingStock;
+    
+            document.addEventListener("DOMContentLoaded", function(event) {
+    // ... (existing code for summary card updates)
+    
+    // =============================  
+    // Retrieve and display recent activity
+    const recentActivities = JSON.parse(localStorage.getItem('recentActivities')) || [];
+    const recentActivityList = document.querySelector(".recent-activity ul");
+    recentActivityList.innerHTML = '';
+    recentActivities.forEach(activity => {
+        const li = document.createElement("li");
+        li.textContent = activity;
+        recentActivityList.appendChild(li);
+    });
+});
+        });
+    </script>
+
+    
+</body>
+</html>

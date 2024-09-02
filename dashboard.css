@@ -1,0 +1,163 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(fi.jpeg);
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    background-color:transparent;
+    /* backdrop-filter: blur(20px); */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+}
+
+h1 {
+    flex-grow: 2;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    margin: 0;
+    margin-right: 570px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color:grey;
+}
+
+/* Main Dashboard Styles */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* Summary Cards Styles */
+.summary-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color:whitesmoke;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+.card p {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #333;
+}
+
+/* Recent Activity Styles */
+.recent-activity, .quick-access {
+    margin-bottom: 30px;
+    background-color:darkslategrey;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+}
+
+.recent-activity h2, .quick-access h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color:white;
+}
+
+.recent-activity ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.recent-activity ul li {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    color:red;
+    transition: background-color 0.3s ease;
+}
+
+.recent-activity ul li:hover {
+    background-color: #f0f2f5;
+}
+
+/* Quick Access Styles */
+.quick-access button {
+    padding: 15px 30px;
+    margin-right: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.quick-access button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 30px;
+    text-align: center;
+    color: #777;
+    font-size: 0.9rem;
+    width: 100%;
+}
